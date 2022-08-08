@@ -10,9 +10,9 @@
 
 .header {
     position: fixed;
+    z-index: 50;
     top: 0;
     left: 0;
-    background-color: lightcoral;
     width: 100%;
     box-shadow: 0 0 0.0625rem 0.0625rem #fff8;
 }
@@ -21,9 +21,10 @@
     padding: 1rem 0;
 }
 
-.header-container {
+.header-nav__container {
     display: flex;
     padding: 0 1rem;
+    margin: 0 auto;
     align-items: center;
     justify-content: space-between;
 }
@@ -45,25 +46,200 @@
 }
 
 .header-nav__menu-link {
-    color: rgb(3, 25, 47);
+    color: #fff;
     position: relative;
     font-weight: bold;
     text-decoration: none;
-    transition: color 0.15s;
+    transition: color 0.25s;
 }
 
 .header-nav__menu-link:hover,
 .header-nav__menu-link--active {
     color: red;
 }
-.header-nav__menu-link::before{
-    content:'';
+
+.header-nav__menu-link::before {
+    content: '';
     position: absolute;
     bottom: -0.125rem;
     width: 0;
     height: 0.0625rem;
     background-color: gold;
+    transition: width 0.25s;
 }
-.header-nav__menu-link:hover::before, .header-nav__menu-link--active::before{
+
+.header-nav__menu-link:hover::before,
+.header-nav__menu-link--active::before {
     width: 100%;
+}
+
+.i-hero {
+    display: flex;
+    position: relative;
+    align-items: center;
+    background-image: url('../assets/img/background-cloud.webp');
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.i-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.i-hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2rem;
+    background-image: linear-gradient(transparent, #20232a);
+}
+
+.i-hero__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 0 1rem;
+    margin:0 auto;
+    z-index: 5;
+}
+
+.i-hero__info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: 448px;
+
+}
+
+.i-hero__info-title {
+    margin: 0;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.i-hero__info-subtitle {
+    margin: 0;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.i-hero__info-paragraph {
+    margin: 0;
+    text-align: center;
+    display: none;
+}
+
+.i-hero__info-link {
+    color: #000;
+    background-color: #61dafb;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 0.5em 2em;
+    border-radius: 5px;
+    border: 0;
+    text-decoration: none;
+    cursor: pointer;
+    transition: filter 0.25s ease-in-out;
+}
+
+.i-hero__info-link:hover {
+    filter: brightness(112.5%);
+    box-shadow: 0 0 0.25rem 0 #61dafb;
+}
+
+.i-hero__img-container {
+    display: flex;
+    justify-content: center;
+}
+
+.i-hero__img-pro-tech-container {
+    position: relative;
+}
+
+.i-hero__img-pro {
+
+    background-color: #00000080;
+    display: block;
+    border-radius: 50%;
+    width: 256px;
+    height: 256px;
+}
+
+.i-hero__img-tech-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 0;
+    animation: spin 10s linear 0s infinite normal running;
+}
+
+.i-hero__img-tech {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+}
+
+.i-hero__img-tech:nth-child(1) {
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.i-hero__img-tech:nth-child(2) {
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.i-hero__img-tech:nth-child(3) {
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.i-hero__img-tech:nth-child(4) {
+    top: 50%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (min-width:768px) {
+    .i-hero__container {
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+    .i-hero__info-link{
+        font-size: 1rem;
+    }
+    .i-hero__info-paragraph{
+        display: flex;
+        font-size: 1.25rem;
+    }
+    .i-hero__info-subtitle{
+        font-size: 1.5rem;
+    }
+    .i-hero__info-title{
+        font-size: 1.75rem;
+    }
+    .header-nav__container{
+        max-width: 1024px;
+    }
 }

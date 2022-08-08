@@ -31,9 +31,9 @@
 <body class="body">
 	<header class="header">
 		<nav class="header-nav">
-			<div class="header-container">
+			<div class="header-nav__container">
 				<a href="#iHero" class="header-nav__link-logo-container">
-					<img src="./assets/img/logo2.png" alt="logo" width="100px" class="header-nav__link-logo">
+					<img src="./assets/img/logo.png" alt="logo" width="100px" class="header-nav__link-logo">
 				</a>
 				<ul class="header-nav__menu-list-container">
 					<li>
@@ -43,33 +43,34 @@
 						<a href="#iContact" class="header-nav__menu-link">Contacto</a>
 					</li>
 					<li>
-						<a href="#" class="header-nav__menu-link header-nav__menu-link--active">Rudy Mendoza</a>
+						<a href="#" class="header-nav__menu-link header-nav__menu-link--active">Rudy</a>
 					</li>
 				</ul>
 			</div>
 		</nav>
 	</header>
 	<main>
-		<article>
-			<div>
-				<div>
-					<h1>RUDY MENDOZA</h1>
-					<h2>Programador Web</h2>
-					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque labore porro dolores numquam,
+		<article class="i-hero" id="iHero">
+			<div class="i-hero__container">
+				<div class="i-hero__info-container">
+					<h1 class="i-hero__info-title">RUDY MENDOZA</h1>
+					<h2 class="i-hero__info-subtitle">Programador Web con los mejores diseños y desarrollo de paginas web de Peru</h2>
+					<p class="i-hero__info-paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque labore porro
+						dolores numquam,
 						iste maxime saepe reiciendis rem in amet fugit, nostrum aliquid quidem aperiam, possimus quos!
 						Ex, ut porro!</p>
-					<a href="#" class="hero_info-link">Aprende gratis</a>
+					<a href="#" class="i-hero__info-link">¡Aprende gratis!</a>
 				</div>
-				<div>
-					<img src="" alt="Rudy Mendoza" />
-					<figure>
-						<img src="" alt="">
-						<figcaption>
-							<p>
-								<strong></strong>
-							</p>
-						</figcaption>
-					</figure>
+				<div class="i-hero__img-container">
+					<div class="i-hero__img-pro-tech-container">
+						<img src="./assets/img/pop.png" alt="Rudy Mendoza" class="i-hero__img-pro" height="256" width="256"/>
+						<figure class="i-hero__img-tech-container">
+							<img src="./assets/svg/logo-html.svg" alt="html" class="i-hero__img-tech" height="64" width="64">
+							<img src="./assets/svg/logo-css.svg" alt="css" class="i-hero__img-tech" height="64" width="64">
+							<img src="./assets/svg/logo-js.svg" alt="" class="i-hero__img-tech" height="64" width="64">
+							<img src="./assets/svg/logo-react.svg" alt="" class="i-hero__img-tech" height="64" width="64">
+						</figure>
+					</div>
 				</div>
 			</div>
 		</article>
