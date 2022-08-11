@@ -5,6 +5,7 @@
 .body {
     background-color: #20232a;
     color: #fff;
+    font-family: 'Noto Sans JP', sans-serif;
     margin: 0;
 }
 
@@ -23,10 +24,10 @@
 
 .header-nav__container {
     display: flex;
-    padding: 0 1rem;
-    margin: 0 auto;
     align-items: center;
     justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .header-nav__link-logo-container {
@@ -35,20 +36,21 @@
 
 .header-nav__link-logo {
     width: 108px;
+    height: 32px;
 }
 
 .header-nav__menu-list-container {
     display: flex;
+    gap: 1rem;
     margin: 0px;
     padding: 0px;
     list-style: none;
-    gap: 1rem;
 }
 
 .header-nav__menu-link {
-    color: #fff;
     position: relative;
-    font-weight: bold;
+    color: #fff;
+    font-weight: 700;
     text-decoration: none;
     transition: color 0.25s;
 }
@@ -61,11 +63,12 @@
 .header-nav__menu-link::before {
     content: '';
     position: absolute;
+    left: 0;
     bottom: -0.125rem;
     width: 0;
     height: 0.0625rem;
     background-color: gold;
-    transition: width 0.25s;
+    transition: width 0.25s ease-in-out;
 }
 
 .header-nav__menu-link:hover::before,
@@ -74,13 +77,13 @@
 }
 
 .i-hero {
-    display: flex;
     position: relative;
+    display: flex;
     align-items: center;
     background-image: url('../assets/img/background-cloud.webp');
-    height: 100vh;
     background-position: center;
     background-size: cover;
+    height: 100vh;
     overflow: hidden;
 }
 
@@ -98,6 +101,7 @@
     content: '';
     position: absolute;
     bottom: 0;
+    left: 0;
     width: 100%;
     height: 2rem;
     background-image: linear-gradient(transparent, #20232a);
@@ -108,7 +112,7 @@
     flex-direction: column;
     gap: 2.5rem;
     padding: 0 1rem;
-    margin:0 auto;
+    margin: 0 auto;
     z-index: 5;
 }
 
@@ -226,20 +230,275 @@
         max-width: 1024px;
         margin: 0 auto;
     }
-    .i-hero__info-link{
+
+    .i-hero__info-link {
         font-size: 1rem;
     }
-    .i-hero__info-paragraph{
+
+    .i-hero__info-paragraph {
         display: flex;
         font-size: 1.25rem;
     }
-    .i-hero__info-subtitle{
+
+    .i-hero__info-subtitle {
         font-size: 1.5rem;
     }
-    .i-hero__info-title{
+
+    .i-hero__info-title {
         font-size: 1.75rem;
     }
-    .header-nav__container{
+
+    .header-nav__container {
         max-width: 1024px;
     }
+}
+
+.wave {
+    position: relative;
+    margin: 0;
+}
+
+.wave--rotate-180deg {
+    top: -0.125rem;
+    transform: rotate(180deg);
+}
+
+.wavewave {
+    display: block;
+    fill: #282c34;
+}
+
+.experience {
+    background-color: #282c34;
+}
+
+.experiencetitle {
+    margin: 0;
+}
+
+.section {
+    background-color: #282c34;
+    padding: 1.5rem 0;
+}
+.section--headed{
+    box-shadow: 0 0 0.0625rem 0.0625rem #fff8;
+}
+
+.container {
+    padding: 0 1rem;
+    max-width: 640px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.container--elements {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.section__title {
+    margin: 0;
+    font-size: 1.5rem;
+    text-align: center;
+    text-shadow: 0 0 0.25rem turquoise;
+}
+
+.section__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card-exp {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+}
+
+.card-exp__period {
+    font-size: 0.875rem;
+    text-shadow: 0 0 0.125rem turquoise;
+    margin: 0;
+}
+
+.card-exp__company {
+    font-size: 1.25rem;
+    margin: 0;
+    text-shadow: 0 0 0.125rem turquoise;
+}
+
+.card-exp__role {
+    margin: 0;
+    font-size: 0.875rem;
+    text-shadow: 0 0 0.125rem turquoise;
+}
+
+.card-exp__activities {
+    margin: 0;
+    padding: 0;
+    list-style: square;
+}
+
+.card-exp__activity {
+    font-size: 0.875rem;
+}
+
+.button {
+    display: inline-block;
+    background-color: #20232a;
+    border: #20232a 0.125rem solid;
+    border-radius: 0.5rem;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.75rem;
+    font-family: monospace;
+    text-decoration: none;
+    padding: 0.5em 2em;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: filter 0.25s, box-shadow 0.25s;
+
+    margin: 0.25rem;
+}
+
+.button:hover {
+    box-shadow: 0 0 0.25rem 0 #20232a;
+    filter: brightness(112.5%);
+}
+
+.button--primary {
+    background-color: #61dafb;
+    border: #61dafb 0.125rem solid;
+    color: #000;
+}
+
+.button--primary:hover {
+    box-shadow: 0 0 0.25rem 0 #61dafb;
+}
+
+.button--secondary {
+    background-color: gold;
+    border: gold 0.125rem solid;
+    color: #000;
+}
+
+.button--secondary:hover {
+    box-shadow: 0 0 0.25rem 0 gold;
+}
+
+.button--tertiary {
+    background-color: white;
+    border: white 0.125rem solid;
+    color: #000;
+}
+
+.button--tertiary:hover {
+    box-shadow: 0 0 0.25rem 0 white;
+}
+
+.button--outline {
+    background-color: transparent;
+    color: #000;
+}
+
+@media (min-width:768px) {
+    .container {
+        max-width: 1024px;
+    }
+
+    .section__title {
+        font-size: 2rem;
+    }
+
+    .card-exp__period {
+        font-size: 1.5rem;
+    }
+
+    .card-exp__company {
+        font-size: 1.5rem;
+    }
+
+    .card-exp__role {
+        font-size: 1rem;
+    }
+
+    .card-exp__activity {
+        font-size: 1rem;
+    }
+}
+
+.wave__wave {
+    display: block;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form__input {
+    background-color: transparent;
+    border: none;
+    box-shadow: 0 0 0.125rem 0 #61dafb;
+    padding: 00.25rem;
+    color: white;
+    font-size: 0.875rem;
+    outline: none;
+}
+
+@media (min-width: 768px) {
+    .form__input {
+        font-size: 1rem;
+        padding: 0.75em;
+    }
+}
+
+.form__input:focus:invalid {
+    box-shadow: 0 0 0.125rem crimson,
+        0 0 0.125rem crimson;
+    ;
+}
+.menu{
+    display: flex;
+    gap: 1rem;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.menu__img{
+    width: 24px;
+    height: 24px;
+    transition: transform 0.25s;
+}
+
+.menu__img:hover {
+  transform: scale(1.125);
+}
+@media (min-width:768px) {
+    .menu__img{
+        width: 32px;
+        height: 32px;
+    }
+}
+.section__footer-title{
+    position: relative;
+    font-size: 0.75rem;
+    margin: 0;
+}
+@media (min-width:768) {
+    .section__footer-title{
+        font-size: 1rem;
+    }
+}
+.section__footer-title::before{
+    content: '';
+    position: absolute;
+    top: -0.75rem;
+    left:0;
+    background-color: #fff8;
+    width: 100%;
+    height: 0.0625rem;
 }
